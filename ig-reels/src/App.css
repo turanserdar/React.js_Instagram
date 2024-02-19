@@ -1,7 +1,5 @@
 html{
-
   scroll-snap-type: y mandatory;
-
 }
 
 .app{
@@ -9,25 +7,22 @@ html{
   place-items: center;
   height: 100vh;
   background-color: black;
-
 }
 
-.app__top{
+/* .app__top{
+  margin-bottom: 150px;
+} */
 
-  margin-bottom: -150px;
-}
-
-
-.app__top > h1{
+.app__top > h1 {
   text-align: center;
   color:white
-}
+} 
 
 .app__logo{
   height: 12vh;
 }
 
-Hide scroolbar for Chrome, Safari and Opera
+/* Hide scroolbar for Chrome, Safari and Opera */
 .app__videos::-webkit-scrollbar{
   display: none;
 }
@@ -50,6 +45,9 @@ Hide scroolbar for Chrome, Safari and Opera
   overflow: scroll;
   scroll-snap-type: y mandatory;
 }
+
+
+
 
 
 

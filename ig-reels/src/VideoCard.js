@@ -24,17 +24,15 @@ function VideoCard() {
   
 
   return (
-    <div className='videoCard'>
-      
+    <div className='videoCard'>   
     <video 
     ref={videoRef}
     onClick={onVideoPress}
-    className='videoCard__player'
-    src='"http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"'
+    className="videoCard__player"
+    src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
     alt="IG reel video"
     loop
     />
-
     </div>
   )
 }
