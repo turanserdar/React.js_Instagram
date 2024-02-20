@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 import './VideoCard.css'
 import { useRef } from 'react';
+import VideoHeader from './VideoHeader';
+import VideoFooter from './VideoFooter';
 
-function VideoCard() {
+function VideoCard({url, like, shares, channel, avatarSrc,song}) {
 
     const[isVideoPlaying, setIsVideoPlaying] = useState(false);
 
@@ -25,14 +27,27 @@ function VideoCard() {
 
   return (
     <div className='videoCard'>   
+    <VideoHeader/>
     <video 
     ref={videoRef}
     onClick={onVideoPress}
     className="videoCard__player"
-    src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+    src={url}
     alt="IG reel video"
     loop
     />
+
+    <VideoFooter
+    
+      channel={channel}
+      url={url}
+      shares={shares}
+      avatarSrc={avatarSrc}
+      song={song}
+
+
+    />
+
     </div>
   )
 }
