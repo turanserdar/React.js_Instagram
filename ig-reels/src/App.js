@@ -1,7 +1,26 @@
 import VideoCard from "./VideoCard";
 import "./App.css";
+import { useEffect, useState } from "react";
+import db from "./firebase";
 
 function App() {
+
+  const [reels, setReels]=useState([]);
+
+  useEffect(() => {
+
+      //App Component will run ONCE when it loads, and never again
+ 
+       db.collection('reels').onSnapshot(snapshot=>(
+
+        setReels(snapshot.docs.map(doc=>doc.data()))
+       ))
+
+  },[]);
+
+
+
+
   return (
     //BEM naming convetion
     <div className="app">
@@ -14,16 +33,18 @@ function App() {
         <h1>Reels</h1>
       </div>
       <div className="app__videos"> 
-      
-      <VideoCard
-       channel= 'turn_serdar'
-       avatarSrc='https://pics.craiyon.com/2023-11-26/yHsBRD5FSG64ljvQklEanA.webp'
-       song='Test song - ssssangha'
-       url='http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4'
+
+      {reels.map(reel=>(<VideoCard
+       channel= {channel}
+       avatarSrc={avatarSrc}
+       song={song}
+       url={url}
        likes={950}
        shares={30} 
-      />
-      <VideoCard
+      />))}
+      
+    
+      {/* <VideoCard
         channel= 'Serdar'
         avatarSrc='https://pics.craiyon.com/2023-05-29/69d183130848490eae6fbb912c584b36.webp'
         song='Test song - ssssangha'
@@ -39,10 +60,12 @@ function App() {
        likes={950}
        shares={30}
       
-      /></div>
+      /> */}
+      </div> 
      
     </div>
   );
 }
 
 export default App;
+ 

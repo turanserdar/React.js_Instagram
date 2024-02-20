@@ -4,12 +4,13 @@ import { useRef } from 'react';
 import VideoHeader from './VideoHeader';
 import VideoFooter from './VideoFooter';
 
-function VideoCard({url, like, shares, channel, avatarSrc,song}) {
+function VideoCard({url, likes, shares, channel, avatarSrc,song}) {
 
     const[isVideoPlaying, setIsVideoPlaying] = useState(false);
 
     const videoRef=useRef(null);
 
+    
     const onVideoPress=() =>{
 
         if(isVideoPlaying){
@@ -44,6 +45,7 @@ function VideoCard({url, like, shares, channel, avatarSrc,song}) {
       shares={shares}
       avatarSrc={avatarSrc}
       song={song}
+      likes={likes}
 
 
     />
