@@ -2,7 +2,7 @@ import VideoCard from "./VideoCard";
 import "./App.css";
 import { useEffect, useState } from "react";
 import db from "./firebase";
-import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
+import { collection, getDocs } from 'firebase/firestore/lite';
 
 
 function App() {
