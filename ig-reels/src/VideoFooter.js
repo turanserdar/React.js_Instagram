@@ -7,6 +7,7 @@ import ModeCommentIcon from '@mui/icons-material/ModeComment';
 import SendIcon from '@mui/icons-material/Send';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import FavoriteIcon from '@mui/icons-material/Favorite';
+import Marquee from "react-fast-marquee";
 
 // import MusicNoteIcon from "@material-ui/icons/MusicNote";
 
@@ -19,9 +20,7 @@ function VideoFooter({ likes, shares, channel, avatarSrc, song }) {
   return (
     <div className="videoFooter">
       <br/>
-      <br/>
-      <br/>
-
+  
       <div className="videoFooter__text">
         <Avatar src={avatarSrc} />
         <h3>
@@ -39,6 +38,9 @@ function VideoFooter({ likes, shares, channel, avatarSrc, song }) {
             </>
           )}
         </Ticker> */}
+          <Marquee>
+      <h1>{song}</h1>
+    </Marquee>
       </div>
       <div className="videoFooter__actions">
         <div className="videoFooter__actionsLeft">
