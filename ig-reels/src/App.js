@@ -2,6 +2,8 @@ import VideoCard from "./VideoCard";
 import "./App.css";
 import { useEffect, useState } from "react";
 import db from "./firebase";
+import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
+
 
 function App() {
 
@@ -11,10 +13,18 @@ function App() {
 
       //App Component will run ONCE when it loads, and never again
  
-       db.collection('reels').onSnapshot(snapshot=>(
+      //  db.collection(db,'reels').onSnapshot(snapshot=>(
 
-        setReels(snapshot.docs.map(doc=>doc.data()))
-       ))
+      //   setReels(snapshot.docs.map(doc=>doc.data()))
+     
+
+   
+    const reelsRef = collection(db, 'reels');
+
+  (async () => {
+    const reelsSnapshot = await getDocs(reelsRef);
+    setReels(reelsSnapshot.docs.map(doc => doc.data()));
+  })();
 
   },[]);
 
@@ -34,13 +44,13 @@ function App() {
       </div>
       <div className="app__videos"> 
 
-      {reels.map(reel=>(<VideoCard
+      {reels.map(({avatarSrc,channel,song,url,likes,shares})=>(<VideoCard
        channel= {channel}
        avatarSrc={avatarSrc}
        song={song}
        url={url}
-       likes={950}
-       shares={30} 
+       likes={likes}
+       shares={shares} 
       />))}
       
     

@@ -1,4 +1,6 @@
-import firebase from "firebase";
+
+import { initializeApp } from 'firebase/app';
+import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
 
 
 // Import the functions you need from the SDKs you need
@@ -11,8 +13,8 @@ const firebaseConfig = {
     appId: "1:862133074998:web:f22c7bdf14aeb8427c6c97"
   };
 
-  const app=firebase.initializeApp(firebaseConfig);
-  const db=app.fireStore();
+  const app=initializeApp(firebaseConfig);
+  const db=getFirestore(app);
 
 
   export default db;
