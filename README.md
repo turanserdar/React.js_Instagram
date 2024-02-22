@@ -1,6 +1,27 @@
-# React.js_Instagram_reels_clone
- A small web app that tries to imitate the instagram reels app. Data was stored using Firebase database and material-UI was also used. You can [Click here](https://ig-reels-c530c.web.app/)  to see 
+# Instagram Reels Clone with ReactJS
 
- 
-<img width="652" alt="ig_1" src="https://github.com/turanserdar/React.js_Instagram/assets/85623664/c1642c03-2692-4de9-be78-b6122f7dc04a">
-<img width="603" alt="ig_2" src="https://github.com/turanserdar/React.js_Instagram/assets/85623664/591e9bd4-a11b-43b3-b95c-4cb5be04442e">
+This project includes a small web application that aims to mimic the desktop web version of the Instagram reels application. With this application, you can add and remove items from your shopping basket, and benefit from user authentication thanks to Firebase.
+
+## Instagram Reels Demo Link
+You can visit the application [here](https://ig-reels-c530c.web.app/). 
+
+## Project Objectives
+
+- Deploy a cloud function.
+- Use Firebase for real-time database functionalities.
+- Deploy the app live on Firebase.
+- Responsive Design.
+- Deploy the app live on Firebase.
+
+## Technologies Used
+- ReactJS
+- Firebase ( Realtime Database, Cloud Functions)
+- Material-ui
+
+
+## How to Run
+1. Clone the project files to your computer.
+2. Navigate to the project folder cd ig-reels
+3. Install dependencies npm install
+4. Start the application npm start
+
