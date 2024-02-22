@@ -1,6 +1,6 @@
 # Instagram Reels Clone with ReactJS
 
-This project includes a small web application that aims to mimic the desktop web version of the Instagram reels application. With this application, you can add and remove items from your shopping basket, and benefit from user authentication thanks to Firebase.
+This project includes a small web application that aims to mimic the desktop web version of the Instagram reels application. 
 
 ## Instagram Reels Demo Link
 You can visit the application [here](https://ig-reels-c530c.web.app/). 
