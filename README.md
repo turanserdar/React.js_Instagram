@@ -25,3 +25,11 @@ You can visit the application [here](https://ig-reels-c530c.web.app/).
 3. Install dependencies npm install
 4. Start the application npm start
 
+
+![image](https://github.com/turanserdar/React.js_Instagram/assets/85623664/22eee840-e602-4f39-b617-7cabb308116d)
+![image](https://github.com/turanserdar/React.js_Instagram/assets/85623664/e7097e7d-b5ab-421c-b8e3-96ac745d2a85)
+![image](https://github.com/turanserdar/React.js_Instagram/assets/85623664/49f837a2-120b-442f-a7a7-84cc6a138173)
+
+
+
+
